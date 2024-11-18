@@ -24,8 +24,8 @@ const ClientTestimonials = () => {
         <div className='testmonial-list grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto'>
             {testimonials.map((testimonial, index) => (
                 <div key={index} className='testimonial-card p-4 bg-white shadow rounded-lg'>
-                    <h4 className='font-bold text-gray-900'>{testimonial.name}</h4>
-                    <span className='text-gray-600'>{testimonial.company}</span>
+                    <h4 className='text-4xl font-bold text-gray-900'>{testimonial.name}</h4>
+                    <span className='text-2xl text-gray-600 font-semibold'>{testimonial.company}</span>
                     <blockquote className='text-gray-800 italic mb-4'>{testimonial.message}</blockquote>
                 </div>
             ))}

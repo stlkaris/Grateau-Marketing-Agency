@@ -1,6 +1,5 @@
 import React from 'react'
 import teamPhoto from '../assets/images/teamphoto.jpg';
-import { section } from 'motion/react-client';
 
 const AgencyOverview = () => {
   return (
