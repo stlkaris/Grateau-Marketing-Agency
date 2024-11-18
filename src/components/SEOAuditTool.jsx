@@ -1,8 +1,7 @@
-import { div, p } from 'motion/react-client'
 import React, { useState } from 'react'
 
 const SEOAuditTool = () => {
-    const [URL, setUrl] = useState('')
+    const [url, setUrl] = useState('')
     const [loading, setLoading] = useState(false)
     const [auditResult, setAuditResult] = useState(null)
     const [error, setError] =useState(null)

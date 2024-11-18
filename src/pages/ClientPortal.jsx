@@ -4,12 +4,12 @@ import ClientTestimonials from '../components/ClientTestimonials'
 const ClientPortal = () => {
   return (
     <div className='client-portal'>
-      <h2>Client Dashboard</h2>
-      <p>Welcome, Sylvie! Here you can track your ongoing campaigns and their progress.</p>
+      <h2 className='text-3xl font-extrabold text-center my-6'>Client Dashboard</h2>
+      <p className='text-lg text-center mb-8'>Welcome, Sylvie! Here you can track your ongoing campaigns and their progress.</p>
 
       <ClientTestimonials />
-      <section>
-        <h3>Campaign Insights</h3>
+      <section className='campaign-visualization my-8'>
+        <h3 className='text-2xl font-bold text-center mb-14'>Campaign Insights</h3>
         <div className='visualization-container max-w-4xl mx-auto'>
             <img 
             src="" 

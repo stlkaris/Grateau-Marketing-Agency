@@ -3,7 +3,7 @@ import SEOAuditTool from '../components/SEOAuditTool'
 
 const SEOAuditPage = () => {
   return (
-    <div>
+    <div className='seo-audit-page'>
       <SEOAuditTool />
     </div>
   )

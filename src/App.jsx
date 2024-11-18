@@ -19,11 +19,11 @@ function App() {
         <Route path='/' element={<Home />}></Route>
           <Route path='/agencyoverview' element={<AgencyOverview />}></Route>
           <Route path='/services' element={<Services />}></Route>
-          <Route path='/contact' element={<Contact />}></Route>
           <Route path='/casestudies' element={<CaseStudies />}></Route>
-          <Route path='/blogPage' element={<BlogPage />}></Route> 
+          <Route path='/blogpage' element={<BlogPage />}></Route> 
+          <Route path='/contact' element={<Contact />}></Route>
           <Route path='/clientPortal' element={<ClientPortal />}></Route>  
-          <Route path="/SEOAuditPage" element={<SEOAuditPage />}></Route> 
+          <Route path="/seoauditPage" element={<SEOAuditPage />}></Route> 
 
       </Routes>
     </Router>

@@ -32,12 +32,12 @@ const BlogPage = () => {
 
   ]
   return (
-    <div>
-      <header>
-        <h1>Our Blog</h1>
-        <p>Stay updated with the latest tips and trends in digital marketing.</p>
+    <div className='blog-page'>
+      <header className='header text-center bg-green-600 text-white py-4'>
+        <h1 className='text-2xl font-bold'>Our Blog</h1>
+        <p className='text-lg mt-2'>Stay updated with the latest tips and trends in digital marketing.</p>
       </header>
-    <div>
+    <div className='blog-container max-w-6xl mx-auto py-8 px-4 grid gap-8 sm:grip-cols-1 md:grid-cols-2 lg:grid-cols-3'>
       {blogs.map((blog) => (
         <BlogCard 
          key={blog.id}
