@@ -33,19 +33,21 @@ const Services = () => {
     <section className='services-offered py-12 bg-gray-100"'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 className='text-4xl font-extrabold text-gray-900 mb-6'>Our Services</h2>
-       <video
+      <div className='mb-12'>
+      <video
               autoPlay
               loop
               muted
               playsInline
-              className="w-full rounded shadow-lg"
+              className="w-full max-w-4xl mx-auto rounded-lg shadow-lg"
             >
               <source
                 src="/videos/ourservices.mp4"
                 type="video/mp4"
               />
                 Your browser does not support the video tag.
-         </video>    
+         </video>
+         </div>    
         <div className='services-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {services.map((service, index) => (
                 <ServiceCard key={index} title={service.title} description={service.description} icon={service.icon} />
