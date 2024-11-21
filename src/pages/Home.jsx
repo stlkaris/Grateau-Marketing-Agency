@@ -2,11 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import { motion } from 'framer-motion'
 
 const Home = () => {
   return (
-    <motion.div className='relative bg-gray-50'>
+    <motion.div 
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+    className='relative bg-gray-50'>
     <Navbar />
     <section className='hero-section mx-auto px-4 text-center'>
     <div className='hero-content'>

@@ -1,6 +1,8 @@
 import React from 'react'
 import BlogCard from '../components/BlogCard'
-
+import seoImage from '../assets/images/seo1.jpg';
+import socialMediaImage from '../assets/images/socialmedia1.jpg';
+import ppcImage from '../assets/images/ppc.jpg';
 const BlogPage = () => {
   const blogs = [
     {
@@ -9,7 +11,7 @@ const BlogPage = () => {
       description: "Learn the latest strategies to improve your search rankings.",
       author: "Stella Kariuki",
       date: "November 15, 2024",
-      video: "/images/seo1.jpg",
+      image: seoImage,
     },
     {
       id: 2,
@@ -18,7 +20,7 @@ const BlogPage = () => {
         "Discover how social media can transform your digital marketing efforts.",
       author: "Sylvie Doe",
       date: "November 12, 2024",
-      image: "/images/socialmedia1.jpg",
+      image: socialMediaImage,
     },
     {
       id: 3,
@@ -27,8 +29,10 @@ const BlogPage = () => {
         "A beginner-friendly guide to setting up and managing PPC campaigns.",
       author: "Julien Smith",
       date: "November 10, 2024",
-      image: "/images/ppc.jpg",
+      image: ppcImage,
     },
+   
+
 
   ]
   return (
