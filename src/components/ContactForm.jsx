@@ -55,7 +55,7 @@ const ContactForm = () => {
             />
         </div>
 
-        <div mb-4>
+        <div className='mb-4'>
             <label htmlFor="message" className='block text-gray-700 font-medium'>
                 Message
             </label>

@@ -1,4 +1,6 @@
 import React from 'react'
+import { motion } from 'framer-motion';
+import { InView } from 'react-intersection-observer';
 
 const CaseStudies = () => {
     const caseStudies = [
@@ -24,19 +26,45 @@ const CaseStudies = () => {
   return (
     <div className="case-studies">
     <header className="header text-center bg-blue-600 text-white py-6">
-      <h1 className="text-4xl font-bold">Our Success Stories</h1>
-      <p className="text-lg mt-2">
+      <motion.h1 
+      className="text-4xl font-bold"
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      >
+        Our Success Stories
+      </motion.h1>
+      <motion.p 
+      className="text-lg mt-2"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, delay: 0.2 }}
+      >
         Discover how we’ve helped businesses achieve their digital marketing
         goals.
-      </p>
+      </motion.p>
     </header>
 
     <div className="case-study-container mx-auto py-8 px-4 grid gap-8 sm:grid-cols-1 md:grid-cols-2">
       {caseStudies.map((study) => (
-        <div
+        <InView
           key={study.id}
+          triggerOnce
+          onChange={(InView) => {
+            if (InView) {
+              // Handle animation on entering view
+            }
+          }}
+          >
+       {({ ref, inView }) => (
+       
+        <motion.div
+        ref={ref}
           className="case-study-card shadow-lg border rounded-lg overflow-hidden"
-        >
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
+          transition={{ duration: 1 }}
+       >
              <video
               autoPlay
               loop
@@ -56,7 +84,9 @@ const CaseStudies = () => {
             <h3 className="text-lg font-semibold text-blue-500">Results</h3>
             <p className="text-gray-700">{study.results}</p>
           </div>
-        </div>
+        </motion.div>
+        )}
+        </InView>
       ))}
     </div>
   </div>

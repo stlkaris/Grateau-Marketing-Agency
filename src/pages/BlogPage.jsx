@@ -3,6 +3,9 @@ import BlogCard from '../components/BlogCard'
 import seoImage from '../assets/images/seo1.jpg';
 import socialMediaImage from '../assets/images/socialmedia1.jpg';
 import ppcImage from '../assets/images/ppc.jpg';
+import { motion } from 'framer-motion';
+import { InView } from 'react-intersection-observer'
+
 const BlogPage = () => {
   const blogs = [
     {
@@ -37,13 +40,26 @@ const BlogPage = () => {
   ]
   return (
     <div className='blog-page'>
-      <header className='header text-center bg-blue-800 text-white py-4'>
+      <motion.header 
+      className='header text-center bg-blue-800 text-white py-4'
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      >
         <h1 className='text-2xl font-bold'>Our Blog</h1>
         <p className='text-lg mt-2'>Stay updated with the latest tips and trends in digital marketing.</p>
-      </header>
+      </motion.header>
     <div className='blog-container max-w-6xl mx-auto py-8 px-4 grid gap-8 sm:grip-cols-1 md:grid-cols-2 lg:grid-cols-3'>
       {blogs.map((blog) => (
-     
+     <InView key={blog.id} triggerOnce>
+      {({ inView, ref }) => (
+        <motion.div
+        ref={ref}
+        className='blog-card hover:scale-105 transition-transform duration-300'
+        initial={{ opacity: 0, y: 50 }}
+        animate={inView ? { opacity: 1, y: 0} : {}}
+        transition={{ duration: 0.8 }}
+        >
         <BlogCard 
          key={blog.id}
          title={blog.title}
@@ -52,6 +68,9 @@ const BlogPage = () => {
          date={blog.date}
          image={blog.image}
         />
+        </motion.div>
+      )}
+        </InView>
       ))}
     </div>
     </div>
