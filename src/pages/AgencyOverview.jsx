@@ -61,18 +61,6 @@ const AgencyOverview = () => {
                  <p className='text-lg font-medium'>{text}</p>
                 </motion.div>
              ))}
-                {/* <div className='uspbg-white shadow-md p-4 rounded-lg flex items-center gap-4'>
-                    <span className='text-4xl'  role='img' arai-label='experience'>💼</span>
-                    <p className='text-lg font-medium'>10+ Years of Experience</p>
-                </div>
-                <div className='usp bg-white shadow-md p-4 rounded-lg flex items-center gap-4'>
-                    <span className='text-4xl' role='img' aria-label='projects'>📈</span>
-                    <p className='text-lg font-medium'>100+ Successful Projects</p>
-                </div>
-                <div  className='usp bg-white shadow-md p-4 rounded-lg flex items-center gap-4'>
-                    <span className='text-4xl' role='img' aria-label='certified'> 🏅</span>
-                    <p className='text-lg font-medium'>Certified Marketing Experts</p>
-                </div> */}
                 </motion.div>
                 </motion.div>
              </motion.div>
