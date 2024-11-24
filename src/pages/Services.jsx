@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard'
 import { motion } from 'framer-motion';
 
@@ -78,6 +79,12 @@ const Services = () => {
                </motion.div>
             ))}
         </div>
+        <Link
+          to="/"
+          className="mt-12 inline-block bg-blue-600 text-white font-semibold py-2 px-6 rounded-md shadow-md hover:bg-blue-700 transition duration-300"
+        >
+          Back to Home
+        </Link>
         </div>
     
     </motion.section>

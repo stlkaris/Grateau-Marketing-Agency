@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { InView } from 'react-intersection-observer';
 
@@ -89,6 +90,12 @@ const CaseStudies = () => {
         </InView>
       ))}
     </div>
+    <Link
+        to="/"
+        className="mt-8 inline-block bg-blue-600 text-white font-semibold py-2 px-6 rounded-md shadow-md hover:bg-blue-700 transition duration-300"
+      >
+        Back to Home
+      </Link>
   </div>
   )
 }

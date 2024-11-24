@@ -1,5 +1,6 @@
 // src/pages/Contact.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ContactForm from '../components/ContactForm';
 import { motion } from 'framer-motion';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
@@ -73,8 +74,14 @@ const Contact = () => {
             loading="lazy"
           ></iframe>
         </div>
+        <Link
+        to="/"
+        className="mt-8 inline-block bg-blue-600 text-white font-semibold py-2 px-6 rounded-md shadow-md hover:bg-blue-700 transition duration-300"
+      >
+        Back to Home
+      </Link>
       </motion.section>
-
+     
     </motion.div>
   );
 };
